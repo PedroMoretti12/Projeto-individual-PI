@@ -3,27 +3,32 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: monospace;
   background-color: black;
 }
 
 .container {
   width: 80%;
   margin: auto;
-  display: flex;
+}
+
+#fundo_index {
+  background-image: url("../assets/imgs/fundo_index.png");
+  background-size: cover;
+  height: 510px;
+  background-repeat: no-repeat;
 }
 
 .header {
-  border-bottom: 3px solid #32b9cd;
 }
 
 .header .container {
-  justify-content: space-between;
+  display: flex;
 }
 
 .header a {
   text-decoration: none;
-  color: #e3b062;
+  color: white;
 }
 
 .agora {
@@ -31,56 +36,47 @@ body {
 }
 
 .navbar {
-  width: 300px;
+  width: 400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
-  color: #e3b062;
+  color:  white;
+  font-size: 15px;
 }
 
+#imagem_index {
+  width: 100%;
+}
 
 .titulo {
   color: #32b9cd;
-  width: fit-content;
-  font-weight: 500;
+  width: 35%;
 }
 
-
-/* BANNER */
-
-.banner {
-  height: fit-content;
-  padding: 40px 0;
+#texto_senna {
   color: white;
-  background-image: url(".././assets/imgs/bg-jelly-fish-para_outras_pags.png");
-  background-size: cover;
+  font-size: 15px;
+  width: 300px;
+  text-align: justify;
 }
 
-.banner .container {
-  height: 400px;
-  font-size: 36px;
-  justify-content: center;
-  align-items: center;
+span {
+  font-weight: 700;
+  border-bottom: 1px solid;
+  animation-name: cores;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
-.tamanho-conteudo { 
-  height: fit-content !important;
+@keyframes cores {
+  0% {color: yellow;}
+  20% {color: rgb(57, 57, 255);}
+  40% {color: green;}
+  60% {color: yellow;}
+  80%{color: rgb(49, 49, 255);}
+  100%{color: yellow;}
 }
-
-.banner p {
-  width: 50%;
-  margin: 0;
-  padding: 0;
-  width: 280px;
-  font-size: 36px;
-}
-
-.banner .container span {
-  font-weight: 800;
-}
-
-/* missao visao valores */
 
 .social {
   background-color: #e5e5e5;
