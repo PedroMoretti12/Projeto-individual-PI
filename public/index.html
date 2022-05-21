@@ -26,7 +26,7 @@
             <ul class="navbar">
                 <li>|</li>
                 <li>
-                    <a href="./simulador.html">Conheça a F1</a>
+                    <a onclick="descer()">Conheça a F1</a>
                 </li>
                 <li>Lendas F1</li>
                 <li>
@@ -49,16 +49,50 @@
     </div>
 
     <div class="title_f1">
-        <img src="https://marcas-logos.net/wp-content/uploads/2020/10/f1-logo-1985.jpg" alt="" style="width: 40%;">
-        <img class="f1_logo" src="https://logodownload.org/wp-content/uploads/2016/11/formula-1-logo-1-1.png" alt="" style="width: 20%;">
+        <img src="https://marcas-logos.net/wp-content/uploads/2020/10/f1-logo-1985.jpg" alt="" style="width: 30%;">
+        <img class="f1_logo" src="https://logodownload.org/wp-content/uploads/2016/11/formula-1-logo-1-1.png" alt="" style="width: 30%;">
     </div>
 
     <div class="social">
-            <div>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut numquam repellat incidunt enim blanditiis, odio officia, sapiente similique cum repellendus vitae culpa exercitationem, quis maxime accusamus molestias at voluptates accusantium!
+            <div id="title_social">
+               > Acompanhe a cronologia da F1 > 
             </div>
     </div>
 
+    <div class="container">
+        <div id="primeira_linha">
+            <div class="bola" id="bola1" onclick="exibe1()"><b>1950</b></div>
+            <div class="bola" id="bola2" onclick="exibe3()"></div>
+            <div class="bola" id="bola3" onclick="exibe5()"><b>2022</b></div>
+        </div>
+        <div id="segunda_linha">
+            <div class="bola" id="bola4" onclick="exibe2()"></div>
+            <div class="bola" id="bola5" onclick="exibe4()"></div>
+        </div>
+        <div id="conteudo">
+            <div id="texto_conteudo">
+                A Fórmula 1 é uma competição internacional que teve início no ano de 1950. Conhecida até 1981 como: Campeonato Mundial de Pilotos, a Fórmula 1 conquistou o maior espaço dentro do automobilismo mundial. A competição consiste em "Grandes Prêmios", que são corridas espalhadas pelo mundo inteiro. O campeonato conta com 10 equipes, com 2 pilotos cada uma. Desta maneira, há o Campeonato Mundial de Pilotos e o Campeonato Mundial de Construtores, sendo este último uma classificação de pontos feitos pelas equipes.
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="title_lendas">
+            Lendas da F1
+        </div>
+        <div class="lendas">
+            <div id="schumacher" class="nomefoto">Michael Schumacher<img src="./assets/imgs/schumacher.png" alt=""></div>
+            <div id="senna" class="nomefoto">Ayrton Senna<img src="./assets/imgs/senna.png" alt=""></div>
+            <div id="prost" class="nomefoto">Alain Prost<img src="./assets/imgs/prost.png" alt=""></div>
+        </div>
+        <div class="lendas2">
+            <div id="hamilton" class="nomefoto">Lewis Hamilton<img src="./assets/imgs/hamilton.png" alt=""></div>
+            <div id="fangio" class="nomefoto">Juan Manuel Fangio<img src="./assets/imgs/fangio.png" alt=""></div>
+        </div>
+    </div>
+
+    
+    
     <!--footer inicio-->
     <div class="footer">
         <div class="container">
@@ -71,4 +105,56 @@
 </html>
 
 <script>
+    function descer() {
+        var destino = document.querySelector('#title_social')
+        destino.scrollIntoView({
+                    behavior: 'smooth'
+                });
+    }
+
+    bola1.style.backgroundColor = 'red'
+    function exibe1() {
+        document.querySelector('#texto_conteudo').innerHTML = ' A Fórmula 1 é uma competição internacional que teve início no ano de 1950. Conhecida até 1981 como: Campeonato Mundial de Pilotos, a Fórmula 1 conquistou o maior espaço dentro do automobilismo mundial. A competição consiste em "Grandes Prêmios", que são corridas espalhadas pelo mundo inteiro. O campeonato conta com 10 equipes, com 2 pilotos cada uma. Desta maneira, há o Campeonato Mundial de Pilotos e o Campeonato Mundial de Construtores, sendo este último uma classificação de pontos feitos pelas equipes.'
+        bola1.style.backgroundColor = 'red'
+        bola2.style.backgroundColor = ''
+        bola3.style.backgroundColor = ''
+        bola4.style.backgroundColor = ''
+        bola5.style.backgroundColor = ''
+    }
+
+    function exibe2() {
+        document.querySelector('#texto_conteudo').innerHTML = 'A FIA (Federação Internacional de Automobilismo) anunciou a temporada inaugural da F1 no ano de 1950. O primeiro campeão é Giuseppe Farina. A temporada, que obteve muito prestígio com a participação da grandesíssima Alfa Romeo, foi muito bem recepcionada pelo público. Para se ter ideia, no Grande Prêmio de Silverstone, na Inglaterra, a família real inglesa espectou a corrida que estava em sua primeira edição. A década que vinha a seguir foi TOTALMENTE dominada por Juan Manuel Fangio, piloto argentino que se sagrou um dos maiores campeões da Fórmula 1. '
+        bola1.style.backgroundColor = ''
+        bola2.style.backgroundColor = ''
+        bola3.style.backgroundColor = ''
+        bola4.style.backgroundColor = 'red'
+        bola5.style.backgroundColor = ''
+    }
+
+    function exibe3() {
+        document.querySelector('#texto_conteudo').innerHTML = 'Sobre as décadas seguintes: 60 e 70, acompanhamos a chegada de novos designs, motores e pilotos no ambiente da F1. Inclusive, acompanhamos a chegada de Niki Lauda, grande piloto que se sagrou tricampeão mundial, assim como nosso ilustre piloto nacional, Emerson Piquet, que se sagrou bicampeão mundial. O Brasil conhecia, assim, seu primeiro campeão mundial pela Fórmula 1. Dessa maneira, viriam posteriormente encorajados, outros pilotos brasileiros que se tornaram vitoriosos e reconhecidos pelo mundo inteiro.'
+        bola1.style.backgroundColor = ''
+        bola2.style.backgroundColor = 'red'
+        bola3.style.backgroundColor = ''
+        bola4.style.backgroundColor = ''
+        bola5.style.backgroundColor = ''
+    }
+
+    function exibe4() {
+        document.querySelector('#texto_conteudo').innerHTML = 'Sobre os anos 80 e 90, temos de ter mais cuidado e atenção. Nestes anos, a F1 inflamou e inúmeros pilotos extremamente vitoriosos surgiram. Com atenção especial ao Brasil, o Brasil obteve dois campeões mundiais nestas décadas, sendo eles: Nelson Piquet e o ilustríssimo Ayrton Senna. Nelson Piquet, tricampeão mundial, foi campeão com a Parmalat Racing, Fila Sport e a famosa equipe Willians. Já Ayrton Senna, obteve seu primeiro título no fim dos anos 80 e os outros dois em 1990 e 1991. O início dos anos 90 foi marcado fortemente pela morte de Ayrton Senna durante o Grande Prix de San Marino, morte que causou comoção mundial e brasileira principalmente.'
+        bola1.style.backgroundColor = ''
+        bola2.style.backgroundColor = ''
+        bola3.style.backgroundColor = ''
+        bola4.style.backgroundColor = ''
+        bola5.style.backgroundColor = 'red'
+    }
+
+    function exibe5() {
+        document.querySelector('#texto_conteudo').innerHTML = 'Dos anos 90 para frente, obtivemos a maior curva de evolução no que diz respeito aos carros. Os motores infelizmente foram ficando menos barulhentos em prol de uma tecnologia diferente. Os maiores campeões da F1 também surgiram neste período, como Schumacher e Hamilton, ambos com com 7 títulos mundiais. De Brasil, os brasileiros somente experimentaram Felipe Massa e Rubens Barrichello. Por pouco, quase fomos campeões com Massa em 2008, título tirado por Hamilton na última volta no Grande Prêmio de Interlagos. Evoluindo cada vez mais, os carros atualmente possuem um aspecto muito mais futurista e agradável aos olhos quando comparados aos da década de 50. Uma proteção, duramente criticada, chamada "halo" foi imposta às equipes de F1. Sua aparência, não muito agradável, acabou por salvar a vida de pilotos da F1 como Romain Grosjean, por exemplo.'
+        bola1.style.backgroundColor = ''
+        bola2.style.backgroundColor = ''
+        bola3.style.backgroundColor = 'red'
+        bola4.style.backgroundColor = ''
+        bola5.style.backgroundColor = ''
+    }
 </script>
