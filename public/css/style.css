@@ -220,6 +220,7 @@ span {
   font-weight: 700;
   filter: grayscale(100%);
   transition: all 1s ease-in-out;
+  cursor: pointer;
 }
 
 .nomefoto:hover {
@@ -233,39 +234,32 @@ span {
   width: 100%;
   border-top: 2px solid red;
 }
-.social .container{
+
+/*Parte dos cards */
+
+.display_cards {
+  display: flex;
   justify-content: center;
-}
-
-.box img {
-  width: 170px;
-}
-
-.social .container .boxes {
-  display: flex;
-}
-
-.social p {
-  text-align: center;
-}
-
-.box {
-  margin: 10px;
-  display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #00b7ff;
+  color: white;
+  padding: 40px;
+}
+
+.f1_logo_card {
+  width: 70%;
 }
 
 
-.box {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+iframe {
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 0px 10px 4px rgba(0,0,0,0.6); 
+  box-shadow: 0px 10px 13px -7px #000000, 0px 0px 10px 4px rgba(0,0,0,0.6);
+  margin-top: 5%;
 }
 
 
-
+/*Fim cards*/
 /* FOOTER */
 
 .footer {
@@ -274,6 +268,7 @@ span {
   color: #fff;
   display: flex;
   font-size: 15px;
+  margin-top: 3%;
 }
 
 .footer .container {
@@ -282,6 +277,12 @@ span {
 
 
 /* LOGIN */
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .banner .container .card {
   background-color: #e5e5e5;

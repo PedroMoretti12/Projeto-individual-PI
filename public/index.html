@@ -28,7 +28,7 @@
                 <li>
                     <a onclick="descer()">Conheça a F1</a>
                 </li>
-                <li>Lendas F1</li>
+                <li onclick="descer2()">Lendas F1</li>
                 <li>
                     <a href="./login.html">Faça um post</a>
                 </li>
@@ -81,13 +81,13 @@
             Lendas da F1
         </div>
         <div class="lendas">
-            <div id="schumacher" class="nomefoto">Michael Schumacher<img src="./assets/imgs/schumacher.png" alt=""></div>
-            <div id="senna" class="nomefoto">Ayrton Senna<img src="./assets/imgs/senna.png" alt=""></div>
-            <div id="prost" class="nomefoto">Alain Prost<img src="./assets/imgs/prost.png" alt=""></div>
+            <div id="schumacher" class="nomefoto" onclick="open('schumacher.html','schumacher.html','status=no,Width=400,Height=400');">Michael Schumacher<img src="./assets/imgs/schumacher.png" alt=""></div>
+            <div id="senna" class="nomefoto" onclick="open('senna.html','senna.html','status=no,Width=400,Height=400');">Ayrton Senna<img src="./assets/imgs/senna.png" alt=""></div>
+            <div id="prost" class="nomefoto" onclick="open('prost.html','prost.html','status=no,Width=400,Height=400');">Alain Prost<img src="./assets/imgs/prost.png" alt=""></div>
         </div>
         <div class="lendas2">
-            <div id="hamilton" class="nomefoto">Lewis Hamilton<img src="./assets/imgs/hamilton.png" alt=""></div>
-            <div id="fangio" class="nomefoto">Juan Manuel Fangio<img src="./assets/imgs/fangio.png" alt=""></div>
+            <div id="hamilton" class="nomefoto" onclick="open('hamilton.html','hamilton.html','status=no,Width=400,Height=400');">Lewis Hamilton<img src="./assets/imgs/hamilton.png" alt=""></div>
+            <div id="fangio" class="nomefoto" onclick="open('fangio.html','fangio.html','status=no,Width=400,Height=400');">Juan Manuel Fangio<img src="./assets/imgs/fangio.png" alt=""></div>
         </div>
     </div>
 
@@ -107,6 +107,13 @@
 <script>
     function descer() {
         var destino = document.querySelector('#title_social')
+        destino.scrollIntoView({
+                    behavior: 'smooth'
+                });
+    }
+
+    function descer2() {
+        var destino = document.querySelector('#title_lendas')
         destino.scrollIntoView({
                     behavior: 'smooth'
                 });
@@ -157,4 +164,5 @@
         bola4.style.backgroundColor = ''
         bola5.style.backgroundColor = ''
     }
+
 </script>
