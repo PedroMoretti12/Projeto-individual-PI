@@ -275,6 +275,18 @@ iframe {
   justify-content: center;
 }
 
+#footer_car {
+  width: 150px;
+  animation-name: carro;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+@keyframes carro{
+  0% {margin-left: 115%;}
+  100% {margin-left: -100%;}
+}
+
 
 /* LOGIN */
 
