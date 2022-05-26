@@ -10,7 +10,7 @@
 
     <script src="./js/funcoes.js"></script>
 
-    <link rel="icon" href="./assets/icon/favicon.ico">
+    <link rel="icon" href="https://imagensemoldes.com.br/wp-content/uploads/2020/06/Imagem-de-Pneu-PNG-de-Corrida.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -18,7 +18,10 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="fundo_cadlogin">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/1248/1248824.png" class="voltar" alt="" onclick="window.history.back()">
+    <h1 id="title_logcad">Acesse diversas funcionalidades</h1>
     <div class="banner">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
@@ -27,10 +30,9 @@
         </div>
         <div class="container">
             <div class="card">
-                <h2>Olá de volta!</h2>
+                <h2>Realize seu login!</h2>
+                <h4>Não tem login? <u class="cadastro"><a href="cadastro.html">Cadastre-se</a></u></h4>
                 <div class="formulario">
-
-
                     <b class="tipo_campo">E-mail:</b>
                     <input id="email_input" type="text" placeholder="Login">
 
@@ -57,6 +59,25 @@
 </html>
 
 <script>
+    var contador = 1
+    function loop() {
+        if(contador == 1) {
+            title_logcad.innerHTML = 'Vote em seu piloto preferido'
+        }
+        if(contador == 2) {
+            title_logcad.innerHTML = 'Esteja mais próximo com a F1'
+        }
+        if(contador == 3) {
+            title_logcad.innerHTML = 'Acesse diversas funcionalidades'
+        }
+        if(contador == 4) {
+            contador = 0
+            title_logcad.innerHTML = 'Esteja mais próximo com a F1'
+        }
+        contador++
+    }
+
+    setInterval(() => {loop()}, 4500)    
 
 
     function entrar() {

@@ -49,6 +49,10 @@ body {
   font-size: 15px;
 }
 
+.navbar li:hover {
+  cursor: pointer;
+}
+
 #imagem_index {
   width: 100%;
 }
@@ -157,6 +161,10 @@ span {
   box-shadow: 0px 10px 13px -7px #000000, 0px 0px 20px 3px rgba(0,0,0,0.46);
 }
 
+.bola:hover {
+  cursor: pointer;
+}
+
 .bola_checked {
   width: 40px;
   height: 40px;
@@ -260,6 +268,7 @@ iframe {
 
 
 /*Fim cards*/
+
 /* FOOTER */
 
 .footer {
@@ -290,7 +299,57 @@ iframe {
 
 /* LOGIN */
 
+.cadastro {
+  color: red;
+}
+
+.fundo_cadlogin {
+  background-image: url('https://i.pinimg.com/originals/c2/a7/70/c2a77093b99615e2e3ac677cae5e9418.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: monospace;
+  animation-name: fundo_logcad;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+}
+
+@keyframes fundo_logcad {
+  0% {opacity: 0%;}
+  100% {opacity: 100%;}
+}
+
+#title_logcad {
+  text-align: center;
+  color: white;
+  margin-top: 3%;
+  animation-name: opacidadee;
+  animation-iteration-count: infinite;
+  animation-duration: 4.49s;
+}
+
+@keyframes opacidadee {
+  0% {opacity: 0;}
+  20% {opacity: 0.9;}
+  100% {opacity: 1;}
+}
+
+.voltar {
+  width: 3%;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+.voltar:hover {
+  cursor: pointer;
+}
+
 .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -302,9 +361,10 @@ iframe {
   width: 400px;
   display: flex;
   flex-direction: column;
-  color: palevioletred;
+  color: rgb(255, 255, 255);
   align-items: center;
-  border-radius: 4px;
+  margin-top: 10%;
+  background-color: rgba(0, 0, 0, 0.849);
 }
 
 .card {
@@ -342,7 +402,7 @@ button {
   width: 230px;
   position: fixed;
   border-radius: 4px;
-  border: #e6005a 3px solid;
+  border: rgb(255, 0, 0) 3px solid;
   padding: 10px;
   margin-right: 10%;
 }
@@ -364,7 +424,7 @@ button {
 
 input {
   margin-bottom: 10px;
-  border: 2px solid #32b9cd;
+  border: 2px solid #ff0000;
   padding: 10px;
   text-align: center;
   border-radius: 10px;
@@ -378,7 +438,7 @@ input {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #940000;
   width: 120px;
   align-self: center;
   margin-top: 5px;
@@ -494,14 +554,4 @@ input {
   padding: 10px 15px;
   margin-bottom: 100px;
   cursor: pointer;
-}
-
-/* pagina extra - simulador */
-.simulador {
-  color: white;
-
-}
-
-.simulador .container {
-  flex-direction: column
 }
