@@ -363,7 +363,8 @@ iframe {
   flex-direction: column;
   color: rgb(255, 255, 255);
   align-items: center;
-  margin-top: 10%;
+  margin-top: 0%;
+  margin-bottom: 2%;
   background-color: rgba(0, 0, 0, 0.849);
 }
 
@@ -445,14 +446,14 @@ input {
 }
 
 .loading-div {
-  width: 50px;
+  width: 60px;
   margin: auto;
   display: none;
 }
 
 .loading-div img {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
 }
 
 /* PAGINA DOS GRÁFICOS */
