@@ -18,24 +18,18 @@
     <div class="janela">
         <div class="header-left">
             <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-            </div>
-
-            <div class="btn-nav-white">
-                <a href="./cards.html">
-                    <h3>Aquários</h3>
-                </a>
+                <h3>Acelere, <b id="b_usuario">usuário</b>!</h3>
             </div>
 
             <div class="btn-nav">
 
-                <h3>Gráficos</h3>
+                <h3>Votação</h3>
 
             </div>
 
             <div class="btn-nav-white">
                 <a href="./mural.html">
-                    <h3>Mural de Avisos</h3>
+                    <h3>Faça um post</h3>
                 </a>
             </div>
 
@@ -48,13 +42,14 @@
         <div class="dash">
             <div class="btns-dash">
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
-                <button class="btn-chart" onclick="obterDadosGrafico(1)">Aquario 1</button>
-                <button class="btn-chart" onclick="obterDadosGrafico(2)">Aquario 2</button>
-                <button class="btn-chart" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                <button class="btn-chart" onclick="obterDadosGrafico(4)">Aquario 4</button>
+                <button class="btn-chart" onclick="obterDadosGrafico(1)">Senna</button>
+                <button class="btn-chart" onclick="obterDadosGrafico(2)">Hamilton</button>
+                <button class="btn-chart" onclick="obterDadosGrafico(3)">Schumacher</button>
+                <button class="btn-chart" onclick="obterDadosGrafico(4)">Proust</button>
+                <button class="btn-chart" onclick="obterDadosGrafico(5)">Fangio</button>
             </div>
             <div class="graph">
-                <canvas id="canvas_grafico"></canvas>
+                <canvas id="canvas_grafico" style="width: 85%"></canvas>
             </div>
         </div>
     </div>
@@ -76,7 +71,7 @@
 
     // altere aqui como os dados serão exibidos
     // e como são recuperados do BackEnd
-    function obterDadosGrafico(idAquario) {
+    function obterDadosGrafico(idPiloto) {
         if (proximaAtualizacao != undefined) {
             clearTimeout(proximaAtualizacao);
         }
