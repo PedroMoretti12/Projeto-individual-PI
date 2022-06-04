@@ -20,7 +20,7 @@
 
 <body class="fundo_cadlogin">
 
-    <img src="https://cdn-icons-png.flaticon.com/512/1248/1248824.png" class="voltar" alt="" onclick="window.history.back()">
+    <img src="https://cdn-icons-png.flaticon.com/512/1248/1248824.png" class="voltar" alt="" onclick="redireciona()">
     <h1 id="title_logcad">Acesse diversas funcionalidades</h1>
     <div class="banner">
         <div class="alerta_erro">
@@ -59,6 +59,9 @@
 </html>
 
 <script>
+    function redireciona() {
+        window.location = 'index.html'
+    }
     var contador = 1
     function loop() {
         if(contador == 1) {
