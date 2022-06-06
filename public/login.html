@@ -39,6 +39,11 @@
                     <b class="tipo_campo">Senha:</b>
                     <input id="senha_input" type="password" placeholder="******">
 
+                    <b class="tipo_campo">Resultado:</b>
+                    <input id="resultado_input" type="text" placeholder="Digite o resultado">
+
+                    <h4 id="conta"></h4>
+
                     <button class="btn" onclick="entrar()">Entrar</button>
 
 
@@ -82,8 +87,12 @@
 
     setInterval(() => {loop()}, 4500)    
 
-
+    var num1 = parseInt(Math.random()*100)
+    var num2 = parseInt(Math.random()*50)
+    var resultado = num1 + num2
+    conta.innerHTML = `${num1} ` + `+` + ` ${num2}`
     function entrar() {
+        if(resultado_input.value == resultado) {
         aguardar();
 
         var emailVar = email_input.value;
@@ -146,9 +155,14 @@
         })
 
         return false;
+        } else {
+            alert("Resultado da conta errado.")
+            location.reload()
+        }
     }
 
     function sumirMensagem() {
         cardErro.style.display = "none"
+    
     }
 </script>

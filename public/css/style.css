@@ -494,6 +494,10 @@ input {
   color: #32b9cd;
 }
 
+#conta {
+  text-align: center;
+}
+
 .hello {
   display: flex;
   justify-content: center;
