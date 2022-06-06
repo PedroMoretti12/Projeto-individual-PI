@@ -9,6 +9,33 @@ body {
   scroll-behavior: smooth;
 }
 
+#agradecimento {
+  font-size: 15px;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+#agradecimento_btn {
+  border: 0;
+  background-color: red;
+  color: white;
+  padding: 1%;
+  border-radius: 5px;
+  box-shadow: #000000;
+  transition: all;
+  transition-duration: 2s;
+  margin-top: 3%;
+}
+
+#txt_agradecimento {
+  text-align: center;
+}
+
+#agradecimento_btn:hover {
+  transform:scale(1.04)
+}
+
 .container {
   width: 80%;
   margin: auto;

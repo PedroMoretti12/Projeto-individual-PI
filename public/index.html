@@ -91,19 +91,33 @@
         </div>
     </div>
 
+    <p style="text-align: center; margin-top: 7%;">Aperte o botão e veja quem apoiou o projeto!</p>
+
+    <div id="agradecimento">
+        <button id="agradecimento_btn" onclick="agradecer()">Agradecimento</button>
+    </div>
     
+    <div id="txt_agradecimento">
+
+    </div>
     
-    <!--footer inicio-->
     <div class="footer">
             <img id="footer_car" src="https://cdn-icons-png.flaticon.com/512/55/55299.png?w=360" alt="" style="width: 150px;">
             </div>
     </div>
-    <!--footer fim-->
 </body>
 
 </html>
 
 <script>
+    var amigos = ['Gian', 'Gabriel', 'Felipe', 'Gustavo', 'Patrick', 'Nathália', 'Joaquim', 'Murilo', 'Isa', 'Marco', 'Destaque: Suporte SPTECH!'];
+    function agradecer() {
+        txt_agradecimento.innerHTML = ''
+        for(contador = 0; contador<amigos.length; contador++) {
+            txt_agradecimento.innerHTML += `<br>${amigos[contador]}`
+        }
+    }
+
     function descer() {
         var destino = document.querySelector('#title_social')
         destino.scrollIntoView({
